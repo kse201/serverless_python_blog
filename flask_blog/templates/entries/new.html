@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+{% block body %}
+<form class="add-entry" action="{{ url_for('add_entry')}}" method="post">
+    <div class="form-gorup">
+        <label for="InputTitle">Title</label>
+        <input id="InputTitle" class="form-control" type="text" name="title">
+    </div>
+
+    <div class="from-group">
+        <label for="InputText">Body</label>
+        <textarea id="InputText" class="form-control" name="text" cols="30" rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Post</button>
+</form>
+{% endblock %}

@@ -1,0 +1,9 @@
+DynamoDBLocal*
+third_party_licenses
+*.db
+
+.terraform
+*.tfstate
+*.tfstate.backup
+
+zappa_settings.json

@@ -1,0 +1,24 @@
+{% extends "layout.html"%}
+{% block body %}
+<form class="add-entry" action="method-post">
+    <div class="form-group">
+        <label for="InputTitle">Title</label>
+        <input id="IntputTitle"
+               class="form-control"
+               type="text"
+               name="title"
+               value="{{ entry.title }}">
+    </div>
+
+    <div class="form-group">
+        <label for="InputText">Body</label>
+        <textarea id="InputText"
+                  class="form-control"
+                  name="text"
+                  cols="30"
+                  rows="3">{{ entry.text | safe }}</textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Update</button>
+</form>
+{% endblock %}
